@@ -29,3 +29,8 @@ Exercise : ตู้ยอดน้ำอัดลม
 ---
 1. ทำการ Fork github project นี้ไปยังของตนเอง
 2. นำ Sourcecode ที่ทำเรียบร้อยใส่ไว้ในโฟลเดอร์ `exercise` เท่านั้น
+
+ข้อสงสัยอื่น ๆ 
+---
+ทำการเปิด Issue เพื่อสอบถามหรือแนะนำเพิ่มเติมเกี่ยวกับโจทย์นี้ได้ที่ลิงค์ด้านล่าง  
+https://github.com/nitipatl/problem-vending-machine/issues
