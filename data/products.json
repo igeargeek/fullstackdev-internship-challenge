@@ -1,0 +1,46 @@
+{
+    "total": 6,
+	"data": [{
+			"id": 1,
+			"name": "Pepsi Max",
+			"image": "http://brandirectory.com/images/profile/logo/pepsi4.png",
+			"price": 15.0,
+			"in_stock": false
+		},
+		{
+			"id": 2,
+			"name": "Pepsi Diet",
+			"image": "http://brandirectory.com/images/profile/logo/pepsi4.png",
+			"price": 20.0,
+			"in_stock": true
+		},
+		{
+			"id": 3,
+			"name": "Coke",
+			"image": "http://brandirectory.com/images/profile/logo/cocacola.jpg",
+			"price": 15.0,
+			"in_stock": true
+		},
+		{
+			"id": 4,
+			"name": "Coke Vanilla (S)",
+			"image": "http://brandirectory.com/images/profile/logo/cocacola.jpg",
+			"price": 20.0,
+			"in_stock": false
+		},
+		{
+			"id": 6,
+			"name": "Coke Vanilla (L)",
+			"image": "http://brandirectory.com/images/profile/logo/cocacola.jpg",
+			"price": 25.0,
+			"in_stock": true
+		},
+		{
+			"id": 7,
+			"name": "Mountain Dew",
+			"image": "http://brandirectory.com/images/profile/logo/mountain_dew.jpg",
+			"price": 13.0,
+			"in_stock": true
+		}
+	]
+}
