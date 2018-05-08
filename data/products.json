@@ -5,14 +5,14 @@
 			"name": "Pepsi Max",
 			"image": "http://brandirectory.com/images/profile/logo/pepsi4.png",
 			"price": 15.0,
-			"in_stock": false
+			"in_stock": true
 		},
 		{
 			"id": 2,
 			"name": "Pepsi Diet",
 			"image": "http://brandirectory.com/images/profile/logo/pepsi4.png",
 			"price": 20.0,
-			"in_stock": true
+			"in_stock": false
 		},
 		{
 			"id": 3,
