@@ -14,18 +14,27 @@
         </div>
       </div>
       <div class="col-3 coin-centainer">
-        <h1>Insert Coin</h1> 
-          <span v-for="coin in coinList">
-            <button class="btn btn-light" @click="inputCoin(coin)">${{coin}}</button>
-          </span>
+        <div class="row">
+          <div class="col-12">
+            <h1>Insert Bank</h1>
+            <span v-for="bank in bankList">
+              <button class="btn btn-light" @click="inputMoney(bank)">${{bank}}</button>
+            </span>
+          </div>
+          <div class="col-12">
+            <h1>Insert Coin</h1>
+            <span v-for="coin in coinList">
+              <button class="btn btn-light" @click="inputMoney(coin)">${{coin}}</button>
+            </span>
+          </div>
+        </div>
+        <div class="container">
+          <div class="btn-group btn-group-justified">
+            <a class="btn btn-warning">Coin: ${{coinAmount}}</a>
+            <a class="btn btn-outline-warning" @click="Refund()">Refund</a>
+          </div>
+        </div>
 
-        <button class="btn btn-warning btn-block">
-          Coin: ${{coinAmount}}
-        </button>
-   
-          <button class="btn btn-outline-warning btn-block" @click="Refund()">Refund</button>
-
-        <!-- <h5 style="background-color:white">Refund Coin: ${{RefundCoin}}</h5> -->
         <div style="background-color:white">
           <span v-for="coinList in RefundCoinList">
             <h4>${{coinList}}</h4>
@@ -34,8 +43,8 @@
         <div class="jumbotron">
           <div v-for="recItem in recieveItems">
             <h4>{{recItem.name}} : ${{recItem.price}}</h4>
-
           </div>
+          <button class="btn btn-outline-success btn-block" @click="recieveItem()">Get Item & Change</button>
         </div>
       </div>
     </div>
@@ -50,7 +59,8 @@
     props: {
       msg: String,
       drinkingList: Object,
-      coinList: Array
+      coinList: Array,
+      bankList: Array
     },
     data() {
       return {
@@ -59,14 +69,20 @@
         RefundCoinList: [],
         RefundCoin: 0,
         recieveItems: [],
+        moneyList: []
       }
     },
+    beforeMount() {
+      this.moneyList.push(this.bankList)
+      this.moneyList.push(this.coinList)  
+      console.log("beforeMount",this.moneyList)
+      
+    },
     methods: {
-      inputCoin(coin) {
+      inputMoney(coin) {
         console.log("input : ", coin)
         this.coinAmount += coin;
         this.coinAmountList.push(coin);
-        // console.log("this.coinAmount:", this.coinAmount)
       },
       Refund() {
         this.RefundCoinList = this.coinAmountList;
@@ -74,15 +90,25 @@
       },
       calculateRefund() {
         // console.log("//////////////calculateRefund//////////////////")
-        this.coinList.forEach(element => {
-          // console.log("coinAmount", this.coinAmount)
-          // console.log("element", element)
-          // console.log("...", this.coinAmount - element)
-          if ((this.coinAmount - element) >= 0) {
-            this.coinAmount -= element
-            this.RefundCoinList.push(element)
-            this.calculateRefund();
-          }
+        // this.coinList.forEach(element => {
+        //   if ((this.coinAmount - element) >= 0) {
+        //     this.coinAmount -= element
+        //     this.RefundCoinList.push(element)
+        //     this.calculateRefund();
+        //   }
+        // });
+        console.log("//////////////calculateRefund//////////////////")
+        console.log("moneyList", this.moneyList)
+
+        this.moneyList.forEach(outer_element => {
+          outer_element.forEach(inner_element => {
+            if ((this.coinAmount - inner_element) >= 0) {
+              this.coinAmount -= inner_element
+              this.RefundCoinList.push(inner_element)
+              this.calculateRefund();
+            }
+          })
+
         });
         this.coinAmount = 0;
         // console.log("this.RefundCoinList:", this.RefundCoinList)
@@ -91,6 +117,12 @@
         this.coinAmount -= item.price
         this.recieveItems.push(item);
         this.calculateRefund()
+      },
+      recieveItem() {
+        console.log("Clear Page");
+        this.coinAmount = 0;
+        this.RefundCoinList = [];
+        this.recieveItems = [];
       }
     }
 
@@ -100,7 +132,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h1 {
-    color: mintcream
+    color: mintcream;
+    font-size: 20px;
   }
 
   p {
@@ -143,6 +176,7 @@
 
   }
 
+
   .coin-centainer {
     margin-top: 50px;
   }
@@ -156,5 +190,13 @@
   .btn-danger:hover {
     cursor: not-allowed;
 
+  }
+
+  .btn-outline-warning {
+    color: #FFC107 !important
+  }
+
+  .btn-outline-warning:hover {
+    color: #2F3640 !important
   }
 </style>
