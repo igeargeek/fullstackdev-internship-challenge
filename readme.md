@@ -1,36 +1,37 @@
-Exercise : ตู้หยอดน้ำอัตโนมัติ
+IGEARGEEK : Vending Machine Problem 
 ===
 
-พัฒนาตู้หยอดน้ำอัตโนมัติ โดยเงื่อนไขในการพัฒนาของตู้นี้มีดังนี้
-- สินค้ามีอย่างไม่จำกัด
-- เงินทอนมีอย่างไม่จำกัด
-- เหรียญที่ใช้ได้คือ 1, 2, 5 และ 10 บาท เท่านั้น  
-- เรียกใช้งาน API รายละเอียดของสินต้าจากที่มีให้ด้านล่าง
+Develop vending machine follow this condition
+- Unlimited products
+- Unlimited money changes
+- Allow only 1 baht, 2 baht, 5 baht and 10 baht coins
+- Call API for product detail from balow table
 
-**ตัวอย่างการใช้งาน**  
+**Example**  
 
-|  | Story | เหรียญที่ยอดตามลำดับ | ยอดเงินทั้งหมด | สินค้าที่เลือก | ได้รับสินค้า | เงินทอนที่ได้รับ|
+|  | Story | Insert | Total | Selected | Got item | Change|
 |---|-------|------------------|------------|-----------|----------|------------|
-| 1 |ผู้ใช้หยอดเหรียญ 10, 5 และเลือกสินค้า Pepsi Max|10, 5|15|Pepsi Max|true|-|
-| 2 |ผู้ใช้หยอดเหรียญ 10, 5, 2, 1 และเลือกสินค้า Pepsi Max|10, 5, 2, 1|18|Pepsi Max|true|2, 1|
-| 3 |ผู้ใช้หยอดเหรียญ 10, 2 และเลือกสินค้า Pepsi Max แต่เลือกไม่ได้เพราะยอดเงินไม่พอ|10, 2|12|Pepsi Max|false|-|
-| 4 |ผู้ใช้หยอดเหรียญ 10, 2 และเลือกสินค้า Coke Vanilla (S) แต่เลือกไม่ได้เพราะสินค้าไม่มีในตู้|10, 2|12|Coke Vanilla (S)|false|-|
-| 6 |ผู้ใช้หยอดเหรียญ 10, 10, 2 แต่เปลี่ยนใจขอเงินคืน|10, 10, 2|22|-|false|10, 10, 2|
+| 1 |User insert 10 baht and 5 baht coins and select Pepsi Max|10, 5|15|Pepsi Max|true|-|
+| 2 |User insert 10 baht, 5 baht, 2 baht and 1 baht coins and select Pepsi Max|10, 5, 2, 1|18|Pepsi Max|true|2, 1|
+| 3 |User insert 10 baht, 2 baht coins and select Pepsi Max but can't select because not enough money|10, 2|12|Pepsi Max|false|-|
+| 4 |User insert 10 baht, 2 baht baht coins and select Coke Vanilla (S) but can't selected because product not available in machine|10, 2|12|Coke Vanilla (S)|false|-|
+| 6 |User insert 10 baht, 10 baht, 2 baht coin but need refund|10, 10, 2|22|-|false|10, 10, 2|
 
 
-ข้อมูลเครื่องดื่ม
+Product information
 ---
 
 | API | Endpoint | Method |
 |-----|----------|--------|
 |Drinking list|http://www.mocky.io/v2/5af11f8c3100004d0096c7ed|GET|
 
-ข้อตกลงการตรวจรับ
+Acceptance Agreement
 ---
-1. ทำการ Fork github project นี้ไปยังของตนเอง
-2. นำ Source code ที่ทำเรียบร้อยใส่ไว้ในโฟลเดอร์ `exercise` เท่านั้น
+1. Fork github project to your repository
+2. Move source code to folder `exercise`
 
-ข้อสงสัยอื่น ๆ 
+Question ๆ 
 ---
-ทำการเปิด Issue เพื่อสอบถามหรือแนะนำเพิ่มเติมเกี่ยวกับโจทย์นี้ได้ที่ลิงค์ด้านล่าง  
+Open Issue for ask question or any suggestion from link below. 
+
 https://github.com/nitipatl/problem-vending-machine/issues
