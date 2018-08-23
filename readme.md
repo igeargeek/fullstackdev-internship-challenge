@@ -1,7 +1,7 @@
 I GEAR GEEK : Vending Machine Problem 
 ===
 
-Please follow this condition before code!
+Please follow these conditions before code!
 - Unlimited products. 
 - Unlimited changes. 
 - User can insert only coin : 1 baht, 2 baht, 5 baht and 10 baht. 
