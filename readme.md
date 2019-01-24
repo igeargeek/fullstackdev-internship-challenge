@@ -29,7 +29,7 @@ Product listing
 
 | API | Endpoint | Method |
 |-----|----------|--------|
-|Product listing|http://www.mocky.io/v2/5af11f8c3100004d0096c7ed|GET|
+|Product listing|http://www.mocky.io/v2/5c4982d83200004b000b588c|GET|
 
 Acceptance agreement
 ---
