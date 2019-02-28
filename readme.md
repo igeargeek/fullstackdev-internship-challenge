@@ -11,9 +11,17 @@ Please follow these conditions before code!
   - Readability, consistency — how easy it is to read and understand sections of the code; this includes code clarity, simplicity, and documentation.
   - Predictability, reliability, and robustness — software behavior should be predictable, and not prone to hidden bugs.
   - Maintainability and extensibility — fixing, updating and improving software should be as simple as possible, not inherently complex.
-- Do you have any idea? Let's make more cool features. (Bonus point)
+- Technologies
+  - React, Vue, Laravel (PHP) and Node.js (Express)
+  - CSS Framework : Bootstrap
+- Bonus point
+  - UI testing with automate testing tools such as
+    - [cypress](https://www.cypress.io/)
+    - [Robot Framework](https://robotframework.org/)
+    - [katalon](https://www.katalon.com/)
 
-**Example**  
+
+**Test cases**  
 
 |   | Story | Insert | Total | Selected | Got item? | Change |
 |---|-------|------------------|------------|-----------|----------|------------|
@@ -37,7 +45,7 @@ Acceptance agreement
 1. Fork this github project.
 2. Open `issue` feature in your repository (Options > Features > Checked on Issues) [#Reference](https://softwareengineering.stackexchange.com/questions/179468/forking-a-repo-on-github-but-allowing-new-issues-on-the-fork)
 3. Put your code in `exercise` folder.
-4. Publish your project on hosting, cloud or something that we can play it :)
+4. Publish your project on hosting, cloud or something that we can play it :) (DigitalOcean, Firebase Hosting, Heroku)
 
 Any question?
 ---
