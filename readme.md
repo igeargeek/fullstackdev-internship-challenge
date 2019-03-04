@@ -51,4 +51,4 @@ Any question?
 ---
 Open your issue from this link below
 
-https://github.com/nitipatl/problem-vending-machine/issues
+https://github.com/igeargeek/fullstackdev-internship-challenge/issues
