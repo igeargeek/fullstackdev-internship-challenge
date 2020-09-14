@@ -12,8 +12,8 @@ Please follow these conditions before code!
   - Predictability, reliability, and robustness — software behavior should be predictable, and not prone to hidden bugs.
   - Maintainability and extensibility — fixing, updating and improving software should be as simple as possible, not inherently complex.
 - Technologies
-  - React, Vue, Laravel (PHP) and Node.js (Express)
-  - CSS Framework : Bootstrap
+  - Vue, Nuxt.js and Node.js (Express)
+  - CSS Framework : Bootstrap, Vuetify
 - Bonus point
   - UI testing with automate testing tools such as
     - [cypress](https://www.cypress.io/)
